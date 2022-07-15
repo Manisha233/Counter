@@ -1,15 +1,15 @@
-<div class="flex flex-col items-center justify-center h-screen bg-gray-200">
-  <h1 class="text-5xl font-medium text-gray-700">Counter</h1>
+<div style="display: flex; flex-direction: column; text-align:center; justify-content:center; background-color:azure;">
+  <h1 style="font-size:100px; color:rgb(0, 162, 255);">Counter</h1>
 
-  <span class="m-5 text-9xl">
+  <span style="color:rgb(14, 63, 63); font-size:x-large; margin-bottom:9px; padding:2px;">
     <%= @number %>
   </span>
   
   <section> 
-    <button phx-click="dec" class="text-white text-4xl bg-indigo-600 px-6 py-4 rounded hover:bg-indigo-900">-</button>
+    <button phx-click="dec" style="color:indigo; height:40px; width:40px; margin:10px; font-size:x-large">-</button>
 
-    <button phx-click="clear" class="m-10 text-white text-4xl bg-indigo-900 px-6 py-4 rounded hover:bg-indigo-500">clear</button>
+    <button phx-click="clear" style="color:indigo; height:40px; width:70px; margin:10px; font-size:large">clear</button>
 
-    <button phx-click="inc" class="text-white text-4xl bg-indigo-600 px-6 py-4 rounded hover:bg-indigo-900">+</button>
+    <button phx-click="inc" style="color:indigo; height:40px; width:40px; margin:10px; font-size:x-large">+</button>
   </section>
 </div>
