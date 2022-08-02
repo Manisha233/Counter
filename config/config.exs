@@ -12,6 +12,7 @@ config :counter, CounterWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: CounterWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Counter.PubSub,
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   live_view: [signing_salt: "lDSaTaPy"]
 
 # Configure esbuild (the version is required)
@@ -45,6 +46,8 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :counter, Counter.Repo,
+  ssl: true
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
